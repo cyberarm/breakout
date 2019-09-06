@@ -6,7 +6,7 @@ module Breakout
       end
 
       @bricks = []
-      @columns = 6
+      @columns = 12
       @rows = 3
 
       build_level
@@ -20,8 +20,7 @@ module Breakout
     def build_level
       @rows.times do |y|
         @columns.times do |x|
-          @bricks << Brick.new(x: x * Brick::WIDTH, y: y * Brick::HEIGHT)
-          @bricks.last.position.y += 1
+          @bricks << Brick.new(x: 1 + x * Brick::WIDTH + x, y: 1 + y * Brick::HEIGHT + y)
         end
       end
     end
