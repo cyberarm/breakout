@@ -1,5 +1,5 @@
 module Breakout
-  class Window < CyberarmEngine::Engine
+  class Window < CyberarmEngine::Window
     def initialize(*args)
       super(*args)
 
